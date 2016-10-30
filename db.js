@@ -18,10 +18,18 @@ var tracks = {
     json: true
   };
 
+var country ={
+  url: 'http://data.okfn.org/data/core/country-list/r/data.json'
+};
+
+request.get(country, function(error,response,body){
+  console.log(body);
+});
+
 var insertDocuments = function(db, callback) {
-	request.get(tracks, function(error, response, body){
-		var collection = db.collection('tracks');
-		collection.insert(body.tracks,function(){
+	request.get(country, function(error, response, body){
+		var collection = db.collection('country');
+		collection.insert(body,function(){
 			console.log("inserted");
       callback(body.tracks);
 		});
@@ -33,7 +41,7 @@ var insertDocuments = function(db, callback) {
 
 var findDocuments = function(db, callback) {
   		// Get the documents collection
-	  	var collection = db.collection('tracks');
+	  	var collection = db.collection('countries');
 	  	// Find some documents
 	  	collection.find({}).toArray(function(err, docs) {
 		    assert.equal(err, null);
