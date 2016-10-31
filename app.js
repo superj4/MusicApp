@@ -1,4 +1,4 @@
-
+var cool = require('cool-ascii-faces');
 var express = require('express'); // Express web server framework
 var request = require('request'); // "Request" library
 var querystring = require('querystring');
@@ -24,6 +24,10 @@ MongoClient.connect(url, function(err, db) {
   assert.equal(null, err);
   console.log("Connected correctly to database");
   Db = db
+});
+
+app.get('/cool', function(request, response) {
+  response.send(cool());
 });
 
 app.get('/artists', function(req, res){
