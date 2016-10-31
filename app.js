@@ -18,7 +18,7 @@ var app = express();
 app.use(express.static(__dirname + '/public'))
    .use(cookieParser());
 
-var url = 'mongodb://localhost:27017/mydb';
+var url = 'mongodb://heroku_2dqvd84x:h8ceeo3854bj850dr83jb0aet6@ds139327.mlab.com:39327/heroku_2dqvd84x/mydb';
 var Db;
 MongoClient.connect(url, function(err, db) {
   assert.equal(null, err);
