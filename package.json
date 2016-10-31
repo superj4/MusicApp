@@ -1,0 +1,30 @@
+{
+  "name": "MusicApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "6.6.0"
+  },
+  "dependencies": {
+    "ejs": "2.4.1",
+    "express": "4.13.3",
+    "request": "2.75.0",
+    "cookie-parser": "1.4.3",
+    "async": "1.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superj4/MusicApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/superj4/MusicApp/issues"
+  },
+  "homepage": "https://github.com/superj4/MusicApp#readme"
+}
