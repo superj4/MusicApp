@@ -15,13 +15,14 @@ class Player_panel extends React.Component{
         <div id="layers" className="panel-collapse collapse in">
           <div className="panel-body list-group">
             <div id="player">player</div>
-            <div id="login">login</div>
+            <div id="login">
+              <a href="/login" id="spotify" type="button" className="btn btn-info">Login With Spotify</a>
+            </div>
           </div>
         </div>
       </div>);
   }
 }
-
 
 ReactDOM.render(
   <Player_panel />,

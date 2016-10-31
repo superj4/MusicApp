@@ -56,7 +56,11 @@ var Player_panel = function (_React$Component) {
             React.createElement(
               "div",
               { id: "login" },
-              "login"
+              React.createElement(
+                "a",
+                { href: "/login", id: "spotify", type: "button", className: "btn btn-info" },
+                "Login With Spotify"
+              )
             )
           )
         )

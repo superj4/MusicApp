@@ -88,7 +88,7 @@ function addMarker(data){
   });
   var infowindow = new google.maps.InfoWindow({
     content:info_content(data.artists),
-    maxWidth: 300
+    maxWidth: 200
   });
   marker.addListener('click', function () {
     infowindow.open(map, marker);
